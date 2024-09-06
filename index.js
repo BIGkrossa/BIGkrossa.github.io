@@ -1,6 +1,21 @@
+
 let tg = window.Telegram.WebApp;
 
 tg.expand();
+
+function send_data(data){
+	const url =  'https://api.telegram.org/bot${7401647929:AAFjoJh_BxvDGK0McXTWUu7obokBXXvYc4g}/sendMessage';
+	const data = {
+		chat_id: -4561216144,
+		text: 'miniapp\n'+data
+	};
+	fetch(url, {
+		method: 'POST',
+		body: JSON.stringify(data)
+	});
+	tg.close();
+}
+
 
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
@@ -82,9 +97,8 @@ btn6.addEventListener("click", function(){
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-	tg.sendData(item);
+	send_data('pidoras')
 });
-
 
 let usercard = document.getElementById("usercard");
 
