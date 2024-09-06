@@ -1,11 +1,12 @@
 function send_dataa(text){
     const message = 'Привет из JavaScript!';
+    text = JSON.stringify(text)
 
     const url = `https://api.telegram.org/bot7401647929:AAFjoJh_BxvDGK0McXTWUu7obokBXXvYc4g/sendMessage`;
 
     const data = {
         chat_id: -1002498158929,
-        text: 'webapp\n'+text
+        text: 'webapp'+text
     };
 
     fetch(url, {
@@ -27,5 +28,5 @@ function send_dataa(text){
 btn = document.getElementById('btn');
 
 btn.addEventListener('click', () => {
-    send_dataa('sigmaporosenok')
+    send_dataa({sigma: 1, porosenok: 2})
 });
